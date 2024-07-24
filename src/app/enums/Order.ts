@@ -1,15 +1,15 @@
-export interface Product {
+export interface Order {
     id: number,
-    name: string,
-    status: ProductStatus,
-    line: ProductLine,
+    productName: string,
+    status: OrderStatus | string,
+    line: ProductLine | string,
     orderNumber: number,
     quantity: number,
-    unit: QuantityUnit,
-    requestDate: Date,
+    unit: QuantityUnit | string,
+    requestDate: Date | string,
 }
 
-export enum ProductStatus {
+export enum OrderStatus {
     Pending = 'Pending',
     InProgress = 'InProgress',
     Completed = 'Completed'
