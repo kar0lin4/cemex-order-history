@@ -1,0 +1,30 @@
+<section *ngIf="orders$ | async as orders; else no_results" class="orders-history">
+    <ng-container *ngIf="orders.length > 0; else no_results">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let header of displayedColumns">{{header}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>
+                        <span [ngClass]="getOrderStatusClass(order.status)" class="status-indicator"></span>
+                        {{order.status | addSpace}}
+                    </td>
+                    <td>{{order.orderNumber}}</td>
+                    <td>{{order.line}}</td>
+                    <td [ngStyle]="{ 'font-weight': 'bold'}">{{order.productName}}</td>
+                    <td>{{order.quantity}} {{order.unit}}</td>
+                    <td>{{order.requestDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</section>
+
+<section>
+    <ng-template #no_results>
+        <cmx-no-results></cmx-no-results>
+    </ng-template>
+</section>

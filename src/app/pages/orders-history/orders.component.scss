@@ -1,0 +1,55 @@
+$white-background-color: rgb(255, 255, 255);
+$grey-background-color: rgb(245, 246, 250);
+
+.orders-history {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75em;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 0.5em; 
+
+    thead {
+      th {
+        padding: 0.75em 0.94em;
+        background-color: $grey-background-color;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 0.06em solid #ddd;
+        background-color: $white-background-color;
+        box-shadow: -0.13em 0.19em 0.19em rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background-color: $grey-background-color
+        }
+      }
+
+      td {
+        padding: 0.75em 0.94em;
+        .status-indicator {
+          display: inline-block;
+          width: 1.25em;
+          height: 0.75em;
+          margin-right: 0.31em;
+          vertical-align: middle;
+          border-radius: 0.13em;
+        }
+        .pending {
+          background-color: rgb(248, 175, 55);
+        }
+
+        .in-progress {
+          background-color: rgb(62, 170, 246);
+        }
+
+        .completed {
+          background-color: rgb(124, 203, 69);
+        }
+      }
+    }
+  }
+}
