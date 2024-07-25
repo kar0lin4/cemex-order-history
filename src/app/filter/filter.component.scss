@@ -1,0 +1,38 @@
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .status-filters label,
+  .product-line-filter,
+  .date-filters {
+    margin-right: 20px;
+  }
+  
+  .status-filters label {
+    margin-right: 10px;
+  }
+  
+  .product-line-filter select,
+  .date-filters input {
+    margin-left: 5px;
+  }
+  
+  .date-filters {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-filters label {
+    margin-left: 10px;
+  }
+  
+  .date-filters input {
+    margin-left: 5px;
+  }
+  

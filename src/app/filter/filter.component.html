@@ -1,0 +1,20 @@
+<div class="filter-container">
+    <div class="status-filters">
+      <label *ngFor="let status of orderStatuses;"><input type="checkbox" value="status.value" /> {{status}}</label>
+    </div>
+  
+    <div class="product-line-filter">
+      <label for="product-line">Product Line</label>
+      <select>
+        <option>All Product Lines</option>
+        <option id="product-line" *ngFor="let line of productLines">{{line}}</option>
+      </select>
+    </div>
+  
+    <div class="date-filters">
+      <label for="from-date">From</label>
+      <input type="date" id="from-date"/>
+      <label for="to-date">To</label>
+      <input type="date" id="to-date" />
+    </div>
+  </div>

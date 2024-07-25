@@ -1,5 +1,8 @@
-<section *ngIf="orders$ | async as orders; else no_results" class="orders-history">
-    <ng-container *ngIf="orders.length > 0; else no_results">
+<section class="orders-history-container">
+    <ng-container>
+        <cmx-filter [orders]="orders"></cmx-filter>
+    </ng-container>
+    <ng-container *ngIf="orders.length > 0 && orders; else no_results">
         <table>
             <thead>
                 <tr>
@@ -21,9 +24,6 @@
             </tbody>
         </table>
     </ng-container>
-</section>
-
-<section>
     <ng-template #no_results>
         <cmx-no-results></cmx-no-results>
     </ng-template>
