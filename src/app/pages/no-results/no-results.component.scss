@@ -1,0 +1,24 @@
+.nothing-to-display {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    color: #2c3e50;
+    padding: 1.25em;
+    
+    .info-icon {
+      font-size: 3em;
+      margin-bottom: 1em;
+      color: #5a5a5a;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+  
+    p {
+      font-size: 1em;
+      color: #7f8c8d;
+    }
+  }

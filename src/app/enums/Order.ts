@@ -15,9 +15,11 @@ export enum OrderStatus {
     Completed = 'Completed'
  }
 export enum ProductLine {
-    ReadyMix = 'ReadyMix',
+    ReadyMix = 'Ready Mix',
     Cement = 'Cement',
     Aggregates = 'Aggregates',
+    Gravel = 'Gravel',
+    Sand = 'Sand',
  }
 export enum QuantityUnit {
     SquareMeters = 'm3',

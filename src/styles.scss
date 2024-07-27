@@ -1,4 +1,11 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: rgb(245, 246, 250);
+    min-width: 22em;;
+    display: flex;
+    max-width: 89%;
+
+    @media (min-width: 930px) {
+      justify-content: center;
+      }
 }
