@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { OrderStatus, ProductLine } from '../enums/Order';
-import { FilterService } from '../services/filter.service';
+import { OrderStatus, ProductLine } from '../../enums/Order';
+import { FilterService } from '../../services/filter.service';
 
 export interface ActiveFilter {
   statuses: string[];
@@ -37,6 +37,7 @@ export class FilterComponent {
   orderStatuses: OrderStatus[] = Object.values(OrderStatus);
   todayDate: string = this.formatDate(new Date());
 
+  orderStatus = new FormControl('');
   productLine = new FormControl('');
   dateFrom = new FormControl('');
   dateTo = new FormControl(this.todayDate);
@@ -109,5 +110,14 @@ export class FilterComponent {
     const year = date.getFullYear();
 
     return `${year}-${month}-${day}`;
+  }
+
+  resetFilter() {
+    this.filterService.resetFilter();
+    this.orderStatus.setValue('');
+    this.productLine.setValue('');
+    this.dateFrom.setValue('');
+    this.dateTo.setValue('');
+    this.orderNumber.setValue('');
   }
 }

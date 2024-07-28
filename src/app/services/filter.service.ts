@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ActiveFilter } from '../filter/filter.component';
+import { ActiveFilter } from '../pages/filter/filter.component';
 import { Order } from '../enums/Order';
 
 @Injectable({
@@ -62,5 +62,9 @@ export class FilterService {
         searchByOrderNumberMatch
       );
     });
+  }
+
+  resetFilter() {
+    this.filterSubject.next(this.defaultFilter);
   }
 }

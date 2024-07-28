@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { AddSpacePipe } from '../../add-space.pipe';
 import { Order, OrderStatus } from '../../enums/Order';
-import { FilterComponent } from '../../filter/filter.component';
+import { FilterComponent } from '../filter/filter.component';
 import { FilterService } from '../../services/filter.service';
 import { OrdersService } from '../../services/orders.service';
 import { NoResultsComponent } from '../no-results/no-results.component';
