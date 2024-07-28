@@ -52,4 +52,7 @@ $grey-background-color: rgb(245, 246, 250);
       }
     }
   }
+  @media (max-width: 480px) {
+    min-width: 480px;
+  }
 }

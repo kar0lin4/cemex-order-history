@@ -1,8 +1,9 @@
 <section class="filter-container">
     <div class="filter-item">
-      <label for="order-status" *ngFor="let status of orderStatuses;"><input id="order-status" type="checkbox" [value]="status" (change)="onStatusChange(status, $event)"/> {{status}}</label>
+      <label class="status-item">Status</label>
+      <label class="status-checkbox" for="order-status" *ngFor="let status of orderStatuses;"><input id="order-status" type="checkbox" [value]="status" (change)="onStatusChange(status, $event)"/> {{status}}</label>
     </div>
-  
+    <div class="filter-item vertical-line"></div>
     <div class="filter-item">
       <label for="product-line">Product Line</label>
       <select id="product-line" [formControl]="productLine" (change)="onProductLineChange(productLine.value!)" >
@@ -10,7 +11,7 @@
         <option id="product-line" *ngFor="let line of productLines" [value]="line">{{line}}</option>
       </select>
     </div>
-  
+    <div class="vertical-line"></div>
     <div class="filter-item">
       <label for="from-date">From</label>
       <input [formControl]="dateFrom" [value]="dateFrom.value" type="date" id="from-date" (change)="onDateFromChange(dateFrom.value!)"/>
@@ -20,9 +21,9 @@
       <input [formControl]="dateTo" [value]="dateTo" type="date" id="to-date" (change)="onDateToChange(dateTo.value!)"/>
     </div>
 
-    <div class="filter-item">
+    <div class="search-item filter-item">
       <div class="search-container">
-      <input type="text" placeholder="Search for Order Number" [formControl]="orderNumber" [value]="orderNumber" (input)="onSearchedOrderNumberChange(orderNumber.value!)"/>
+      <input id="search" type="text" placeholder="Search for Order Number" [formControl]="orderNumber" [value]="orderNumber" (input)="onSearchedOrderNumberChange(orderNumber.value!)"/>
       <span>
         <i class="fa fa-search"></i>
       </span>
