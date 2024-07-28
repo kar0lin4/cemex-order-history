@@ -1,3 +1,7 @@
+// In a real app I would have an OrderModel interface with enums 
+// (to prepare data for API call), 
+// and Order interface dedicated for the application data typing purpose
+
 export interface Order {
     id: number,
     productName: string,
@@ -6,7 +10,7 @@ export interface Order {
     orderNumber: number,
     quantity: number,
     unit: QuantityUnit | string,
-    requestDate: Date | string,
+    requestDate: string,
 }
 
 export enum OrderStatus {

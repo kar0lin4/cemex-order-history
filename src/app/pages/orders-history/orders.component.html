@@ -1,8 +1,8 @@
 <section class="orders-history-container">
     <ng-container>
-        <cmx-filter [orders]="orders"></cmx-filter>
+        <cmx-filter></cmx-filter>
     </ng-container>
-    <ng-container *ngIf="orders.length > 0 && orders; else no_results">
+    <ng-container *ngIf="filteredOrders.length > 0 && filteredOrders; else no_results">
         <table>
             <thead>
                 <tr>
@@ -10,7 +10,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let order of orders">
+                <tr *ngFor="let order of filteredOrders">
                     <td>
                         <span [ngClass]="getOrderStatusClass(order.status)" class="status-indicator"></span>
                         {{order.status | addSpace}}
