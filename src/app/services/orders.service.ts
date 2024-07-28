@@ -11,6 +11,4 @@ export class OrdersService {
    getOrders(): Observable<Order[]> {
     return of(this.data.orders);
   }
-
-  
 }

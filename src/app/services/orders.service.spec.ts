@@ -16,7 +16,6 @@ describe('OrdersService', () => {
   });
 
   it('should return a list of orders', (done: DoneFn) => {
-    // Define the expected result
     const expectedOrders: Order[] = [
       {id:8, productName:"Trencher", status :"Completed", line :"Sand", unit:"TN", orderNumber :2939, quantity :3.2, requestDate :"09.02.2023"},
       {id:4, productName:"Trencher", status :"InProgress", line :"Cement", unit:"TN", orderNumber :5577, quantity :32, requestDate :"19.12.2020"},
