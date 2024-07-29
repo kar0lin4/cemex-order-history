@@ -1,6 +1,6 @@
 # CemexOrderHistory
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+Before installing packages for this project, ensure you have the correct version of Node.js. Angular 18 requires Node.js version 16.14.0 or later. To manage Node.js versions efficiently, I recommend using nvm (Node Version Manager). 
 
 ## Development server
 
